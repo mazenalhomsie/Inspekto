@@ -26,3 +26,12 @@ Communication.write_coil(coil_address, 0x0000)
 # Database Insert & Load Part into Correcte Magazine    
 
 
+#at Eth2 Receive Frame make a decision to load part into correct magazine
+
+
+#todo 
+# 1.Show PLC Inspekto Frame
+# 2.Show Barcode Scanner Frame
+
+
+
