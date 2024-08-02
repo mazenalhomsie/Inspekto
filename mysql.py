@@ -47,7 +47,7 @@ def main():
     sql_query = """
     INSERT INTO audi_tme ('AOI Ergebnis', 'AOI Datum',Seriennummer) 
     VALUES (%s, %s)
-    WHERE Seriennummer = ( %s)
+    WHERE Seriennummer = (%s)
     """
     
     # Data to be inserted
