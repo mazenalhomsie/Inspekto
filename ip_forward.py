@@ -1,8 +1,8 @@
 from scapy.all import sniff, sendp, IP, Ether
 
 # Define the IP address to monitor and the output interface
-MONITOR_IP = "192.168.100.10"
-OUTPUT_INTERFACE = "eth2"
+MONITOR_IP = "192.168.100.10"   # Barcode Scanner IP
+OUTPUT_INTERFACE = "eth2"    # PLC Inspekto IP
 
 def packet_callback(packet):
     # Check if the packet is destined for the monitor IP

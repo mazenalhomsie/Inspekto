@@ -1,5 +1,6 @@
 import mysql.connector
 from mysql.connector import Error
+from datetime import datetime
 
 def create_connection(host_name, user_name, user_password, db_name,port):
     """Create a database connection."""
@@ -38,20 +39,24 @@ def close_connection(connection):
 def main():
     # Database credentials
     host = "192.168.1.60"
-    user = "produkte"
+    user = "ICT"
     password = "SECRET"
-    database = "ICT"
+    database = "produkte"
     port = 3306
     
     # SQL query for insertion
     sql_query = """
-    INSERT INTO audi_tme ('AOI Ergebnis', 'AOI Datum',Seriennummer) 
-    VALUES (%s, %s)
-    WHERE Seriennummer = (%s)
+    UPDATE audi_tme 
+    SET `AOI Ergebnis` = %s , `AOI Datum` = %s
+    WHERE Seriennummer = %s;
     """
     
+    # Get the current date and time
+    current_datetime = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+
     # Data to be inserted
-    AOI_data = ("Pass", "Date", "123456")
+    # AOI_data = ('Pass', '2024-08-01 13:34:44','0685280')
+    AOI_data = ('Pass', current_datetime,'0685280')
     
     # Create a connection to the database
     db_connection = create_connection(host, user, password, database,port)

@@ -16,3 +16,14 @@ time.sleep(5.0)
 Communication.write_coil(coil_address, NOK)
 time.sleep(5.0)
 Communication.write_coil(coil_address, 0x0000)
+
+
+
+#Thread Ethernet 1 Barcode Scanner Monitoring 
+# Ancome Ethrenet Frame     
+# 1. Send Barcode Scanner Frame to PLC Inspekto 
+# 2. Receive Frame from PLC Inspekto   OK / NOK
+# Database Insert & Load Part into Correcte Magazine    
+
+
+
