@@ -7,8 +7,17 @@ relay2 = LED(22)
 relay3 = LED(6)
 relay4 = LED(26)
 
-print("Relay testing!")
+def OkRelay():
+    relay1.on()
+    sleep(5)
+    relay1.off()
 
+def NOkRelay():
+    relay2.on()
+    sleep(5)
+    relay2.off()
+
+print("Relay testing!")
 while True:
     relay1.on()
     sleep(0.5)
@@ -25,5 +34,7 @@ while True:
     relay4.on()
     sleep(0.5)
     relay4.off()
-    
     sleep(0.5)
+
+
+
