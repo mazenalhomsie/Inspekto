@@ -2,10 +2,10 @@ from gpiozero import LED
 from time import sleep
 
 # Setup the GPIO pins
-relay1 = LED(7)
-relay2 = LED(3)
-relay3 = LED(22)
-relay4 = LED(25)
+relay1 = LED(4)
+relay2 = LED(22)
+relay3 = LED(6)
+relay4 = LED(26)
 
 print("Relay testing!")
 
@@ -15,7 +15,7 @@ while True:
     relay1.off()
     
     relay2.on()
-    sleep(0.5)
+    sleep(5)
     relay2.off()
     
     relay3.on()
