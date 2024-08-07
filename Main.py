@@ -2,13 +2,11 @@ import Communication;
 import ip_forwarding;
 import mysql_re;
 import network_monitoring;
-import streamlit as st;
 
 
 
 # Eth1 Barcode Scanner Monitoring 
-network_monitoring.capture_packets("eth0");
-
+network_monitoring.capture_packets("eth0")  # Capture packets on eth0 interface
 
 
 
@@ -25,6 +23,4 @@ network_monitoring.capture_packets("eth0");
 #todo 
 # 1.Show PLC Inspekto Frame
 # 2.Show Barcode Scanner Frame
-
-
 
